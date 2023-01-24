@@ -1,0 +1,41 @@
+@import "constants.module.css";
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--primary);
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.done {
+  font-weight: normal;
+  color: gray;
+}
+
+.completed {
+  font-weight: lighter;
+  color: black;
+}
+
+.form > * {
+  height: 55px;
+  border-radius: 18px;
+}
