@@ -1,21 +1,19 @@
 import * as styles from "../styles/app.module.css";
-import TaskForm from "./TaskForm.jsx";
-import TasksHeader from "./TasksHeader.jsx";
+import Header from "./Header.jsx";
 import TasksList from "./TasksList.jsx";
 import { Provider } from "react-redux";
 import { store } from "./redux.js";
+import { Footer } from "./Footer.jsx";
 
 export default function App() {
   return (
-      // Provide Store to children like Context
-      <Provider store={store}>
+    // Provide Store to children like Context
+    <Provider store={store}>
       <div className={styles.container}>
         <article className={styles.inner}>
-          <TasksHeader />
+          <Header />
           <TasksList />
-          <footer className={styles.footer}>
-            <TaskForm />
-          </footer>
+          <Footer />
         </article>
       </div>
     </Provider>

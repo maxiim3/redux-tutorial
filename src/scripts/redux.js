@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import {removeAccentsAndSpecialChars} from "./utils.js";
 
 /**
  * # Creation du Store
@@ -42,11 +43,24 @@ const todoSlice = createSlice({
   },
 });
 
+const filterSlice = createSlice({
+  name: "filter",
+  initialState: "",
+  reducers: {
+    updateFilter: (state, action) =>
+      (state = action.payload),
+  },
+});
+
 export const store = configureStore({
   reducer: {
     todos: todoSlice.reducer,
+    filter: filterSlice.reducer,
   },
 });
 
 // Les actions creators sont automatiquement créés par Redux
 export const { addTask, deleteTask, toggleTask } = todoSlice.actions;
+export const { updateFilter } = filterSlice.actions;
+
+

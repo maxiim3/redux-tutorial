@@ -70,7 +70,7 @@
   scale: 115%;
 }
 
-.footer input {
+.input {
   font-size: 18px;
   width: 100%;
   height: 40px;
@@ -78,4 +78,28 @@
   padding: 0 12px;
   border: none;
   border-radius: 4px;
+}
+
+.input[data-result="true"] {
+  border: 1px solid green;
+  outline: green;
+}
+
+.input[data-result="false"] {
+  animation: shake 120ms ease-in-out 2;
+  border: 1px solid red;
+  outline: red;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-10px);
+  }
+  66% {
+    transform: translateX(10px);
+  }
 }
